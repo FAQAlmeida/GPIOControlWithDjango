@@ -22,4 +22,4 @@ class MotorCommands(generics.ListAPIView):
         except commands_obj.CommandNotFound as ex:
             return Response({"Error": ex})
         except Exception as ex:
-            return Response({"Error": f"Unknown Error: {ex}"})
+            return Response({"Error": "Unknown Error: {0}".format(ex)})
