@@ -14,7 +14,7 @@ commands_obj = commands.Commands()
 
 
 class MotorCommands(generics.ListAPIView):
-    def get(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         try:
             command = request.data.get("command")
             commands_obj.execute(command)
