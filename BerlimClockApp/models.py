@@ -9,4 +9,4 @@ class GPIOPin(models.Model):
     mode = models.CharField(choices=modes, max_length=5)
 
     def __str__(self):
-        return f"GPIOPin nº{self.number} is {'on' if self.state else 'off'} on mode {self.mode}"
+        return "GPIOPin nº{self.number} is {'on' if self.state else 'off'} on mode {self.mode}"
